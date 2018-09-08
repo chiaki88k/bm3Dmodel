@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<color>
+	<light_ambientColor>0.5, 0.3, 0.1, 1</light_ambientColor>
+	<light_diffuseColor>0.5, 0.4, 0.06, 1</light_diffuseColor>
+	<light_Pos>960, 600</light_Pos>
+</color>

@@ -15,7 +15,7 @@ public:
     void setup();
     void setSize(float w, float h, float d);
     void fbSetSize(float w, float hFront,float hBack, float t, float d);
-//    void lrSetSize(float w, float hLeft,float hRight, float t, float d);
+    //    void lrSetSize(float w, float hLeft,float hRight, float t, float d);
     void drawFace(glm::vec3 pos);
     void drawWireframe(glm::vec3 pos);
     void setPos(glm::vec3 pos);

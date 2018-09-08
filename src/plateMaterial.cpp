@@ -65,9 +65,9 @@ void plateMaterial:: fbSetSize(float w, float hFront,float hBack, float t, float
     float halfW=w/2;
     float halfT=t/2;
     float depth=d/2;
-    float halfH;
+//    float halfH;
     glm::vec3 vertices[8];
-    
+  /*
     if(hFront>=hBack){
         halfH=(hFront-hBack)/2;
         vertices[0]=glm::vec3(-1*halfW, -1*halfT+halfH,  1*depth);        // front square vertices
@@ -92,6 +92,17 @@ void plateMaterial:: fbSetSize(float w, float hFront,float hBack, float t, float
         vertices[6]=glm::vec3( 1*halfW,  1*halfT+halfH, -1*depth);
         vertices[7]=glm::vec3(-1*halfW,  1*halfT+halfH, -1*depth);
     }
+   */
+    vertices[0]=glm::vec3(-1*halfW, -1*halfT+hFront,  1*depth);        // front square vertices
+    vertices[1]=glm::vec3( 1*halfW, -1*halfT+hFront,  1*depth);
+    vertices[2]=glm::vec3( 1*halfW,  1*halfT+hFront,  1*depth);
+    vertices[3]=glm::vec3(-1*halfW,  1*halfT+hFront,  1*depth);
+    
+    vertices[4]=glm::vec3(-1*halfW, -1*halfT+hBack, -1*depth);       // back square vertices
+    vertices[5]=glm::vec3( 1*halfW, -1*halfT+hBack, -1*depth);
+    vertices[6]=glm::vec3( 1*halfW,  1*halfT+hBack, -1*depth);
+    vertices[7]=glm::vec3(-1*halfW,  1*halfT+hBack, -1*depth);
+    
     
         ofIndexType indices[] = {
             // -- winding is counter-clockwise (facing camera)
